@@ -1,4 +1,3 @@
-// var markers =[];
 var icon = "blue.png";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzbWtuaWdodCIsImEiOiJjbGVuOW5ya28xY3NnM3RyMDQ2ZnNkYWozIn0.ecaejiZKLI8krjs8N6yIxA';
