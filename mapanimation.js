@@ -4,7 +4,9 @@ var colArray = [
     "#FFDB58",
     "#228B22",
     "#000080",
-    "7F00FF"
+    "7F00FF",
+    "#964B00",
+    "#87CEEB"
 ];
 var busToggle = 0;
 
