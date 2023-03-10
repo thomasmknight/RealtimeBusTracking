@@ -9,6 +9,7 @@ var colArray = [
     "#87CEEB"
 ];
 var busToggle = 0;
+var markers = [];
 
 //your token goes below in place of mine
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzbWtuaWdodCIsImEiOiJjbGVuOW5ya28xY3NnM3RyMDQ2ZnNkYWozIn0.ecaejiZKLI8krjs8N6yIxA';
@@ -33,7 +34,7 @@ async function addMarkers(){
     console.log(long);
     var marker = new mapboxgl.Marker({
         color: colArray[busToggle],
-        draggable: true
+        draggable: false
     }).setLngLat([long, lat])
         .addTo(map);
     map.flyTo({
@@ -47,7 +48,7 @@ async function toggleBus() {
     var response = await fetch(url);
     var json = await response.json();
     var locations = await json.data;
-    if(busToggle <= locations.length){
+    if(busToggle < locations.length){
     busToggle +=1;
     } else{
         busToggle = 0;
